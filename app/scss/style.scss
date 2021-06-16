@@ -1,0 +1,169 @@
+html {
+	box-sizing: border-box;
+}
+
+//resets
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+:root {
+	//colors
+	--primary-violet: hsl(257, 40%, 49%);
+	--primary-magenta: hsl(300, 69%, 71%);
+
+	//fonts
+	--font-headings: "Poppins", sans-serif;
+	--font-body: "Open Sans", sans-serif;
+}
+
+body {
+	font-family: var(--font-body);
+	font-weight: 400;
+	background: url(/assets/bg-mobile.svg) var(--primary-violet) no-repeat;
+	color: #fff;
+	padding: 1.5rem;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-headings);
+		font-weight: 600;
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	img {
+		align-self: flex-start;
+		width: 120px;
+		height: auto;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		.illustration {
+			margin-top: 4rem;
+			& > img {
+				width: 100%;
+			}
+		}
+
+		.info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			h1 {
+				font-size: 1.5rem;
+				text-align: center;
+				text-transform: capitalize;
+			}
+
+			p {
+				margin-top: 1.5rem;
+				font-size: 0.98rem;
+				text-align: center;
+			}
+
+			.cta {
+				font-size: 0.75rem;
+				padding: 0.75em 4em;
+				background-color: #fff;
+				color: var(--primary-violet);
+				border: none;
+				border-radius: 15px;
+				margin-top: 1.5rem;
+				cursor: pointer;
+
+				&:hover {
+					background-color: var(--primary-magenta);
+					color: #fff;
+				}
+			}
+			a {
+				color: #fff;
+			}
+			.icons {
+				margin-top: 4rem;
+				display: flex;
+				gap: 1rem;
+
+				.icon {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 1.5rem;
+					height: 1.5rem;
+					border: 1px solid #fff;
+					border-radius: 50%;
+					cursor: pointer;
+
+					&:hover {
+						background-color: var(--primary-magenta);
+					}
+
+					.fab {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 43.75em) {
+	body {
+		background-size: cover;
+		overflow: hidden;
+	}
+
+	main {
+		img {
+			width: 200px;
+		}
+
+		.content {
+			grid-template-columns: 1.5fr 1fr;
+			max-width: 1000px;
+			.info {
+				margin-top: 5rem;
+				justify-content: flex-start;
+				align-items: flex-start;
+				h1 {
+					max-width: 300px;
+					font-size: 1.5rem;
+					text-align: start;
+				}
+
+				p {
+					max-width: 450px;
+					text-align: start;
+					font-size: 1rem;
+				}
+			}
+		}
+
+		.icons {
+			align-self: flex-end;
+		}
+	}
+}
