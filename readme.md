@@ -2,6 +2,8 @@
 
 This landing page was done as practice for a fictional company called Huddle. The project was done in vanilla HTML and sass.
 
+## [Live Preview](https://sharp-kare-d39d6e.netlify.app/)
+
 ## Screenshot
 
 ![Screenshot](./assets/huddle.jpg)
@@ -11,20 +13,18 @@ This landing page was done as practice for a fictional company called Huddle. Th
 ## Viewing the site
 
 - Fork or clone the repository to your local machine.
-- Open the folder using any editor of your choice (vscode was used).
-- Enter gulp in your terminal to open the start the site.
+- Open the folder using any editor of your choice (vscode was used)
 
 ## Editing the site
 
 - Edit the index.html as you see fit.
 - To style you can edit the style.scss file under the app folder.
-- To run a live preview of the website run gulp in your terminal to compile scss to css.
+- The vscode extension Live sass compiler was used to compile the scss to css.
 
 ## Stack
 
 - HTML
 - Sass
-- Gulp
 
 ## Author
 
